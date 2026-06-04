@@ -1,4 +1,5 @@
-import { Icon, Btn, Placeholder } from "@/components/ui";
+import Image from "next/image";
+import { Icon, Btn } from "@/components/ui";
 import { waLink } from "@/lib/content";
 import type { SiteContent } from "@/lib/content";
 
@@ -60,8 +61,17 @@ export function Hero({ t, onBook }: HeroProps) {
         </div>
 
         {/* Media */}
-        <div className="hero-media">
-          <Placeholder label={h.imgLabel} ratio="4 / 5" className="hero-img" />
+        <div className="hero-media" data-reveal>
+          <div className="hero-img-wrap" style={{ position: "relative" }}>
+            <Image
+              src="/images/hero-clinic.jpg"
+              alt="Resepsi Klinik & Rumah Bersalin Nur Fajar"
+              fill
+              priority
+              sizes="(max-width: 1000px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
 
           <div className="hero-card">
             <span className="hero-card-label">{h.cardTitle}</span>

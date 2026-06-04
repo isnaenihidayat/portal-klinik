@@ -1,9 +1,19 @@
-import { Placeholder, SectionHead } from "@/components/ui";
+import Image from "next/image";
+import { SectionHead } from "@/components/ui";
 import type { SiteContent } from "@/lib/content";
 
 interface GalleryProps {
   t: SiteContent;
 }
+
+const GALLERY_IMAGES = [
+  { src: "/images/gallery-01-birthing.jpg",    alt: "Ruang persalinan Klinik Nur Fajar"  },
+  { src: "/images/gallery-02-inpatient.jpg",   alt: "Kamar rawat inap Klinik Nur Fajar"  },
+  { src: "/images/gallery-03-usg.jpg",         alt: "Ruang USG Klinik Nur Fajar"         },
+  { src: "/images/gallery-04-waiting.jpg",     alt: "Ruang tunggu Klinik Nur Fajar"      },
+  { src: "/images/gallery-05-examination.jpg", alt: "Ruang periksa Klinik Nur Fajar"     },
+  { src: "/images/gallery-06-kids.jpg",        alt: "Area bermain anak Klinik Nur Fajar" },
+];
 
 /**
  * Gallery mosaic grid — 4 columns, 6 items.
@@ -29,12 +39,21 @@ export function Gallery({ t }: GalleryProps) {
         />
         <div className="gallery-grid">
           {g.items.map((it, i) => (
-            <Placeholder
+            <div
               key={i}
-              label={it.label}
-              ratio={i === 0 ? "16 / 10" : "4 / 3"}
               className={`gallery-item gallery-item-${i}`}
-            />
+              style={{ position: "relative" }}
+              data-reveal
+            >
+              <Image
+                src={GALLERY_IMAGES[i].src}
+                alt={GALLERY_IMAGES[i].alt}
+                fill
+                sizes="(max-width: 760px) 100vw, (max-width: 1000px) 50vw, 25vw"
+                style={{ objectFit: "cover" }}
+              />
+              <span className="gallery-label">{it.label}</span>
+            </div>
           ))}
         </div>
       </div>

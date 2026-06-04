@@ -529,8 +529,17 @@ strong {
   position: relative;
 }
 
-.hero-img {
+.hero-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-lg);
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
+}
+
+.hero-img {
+  object-fit: cover;
   border-radius: var(--r-lg);
 }
 
@@ -626,6 +635,19 @@ strong {
 
 .about-media {
   position: relative;
+}
+
+.about-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-img {
+  object-fit: cover;
 }
 
 .about-badge {
@@ -1000,7 +1022,35 @@ strong {
 }
 
 .gallery-item {
+  position: relative;
   border-radius: var(--r);
+  overflow: hidden;
+  min-height: 180px;
+  background: var(--ink-light);
+}
+
+.gallery-item img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 16px 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  pointer-events: none;
 }
 
 .gallery-item-0 {
