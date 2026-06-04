@@ -8,7 +8,7 @@
 
 ## 📋 Tentang Proyek
 
-Website company profile untuk **Klinik & Rumah Bersalin Nur Fajar**, klinik bersalin yang berdiri sejak 2009 dan melayani ribuan keluarga di Sleman, Yogyakarta. Website ini dibangun dengan teknologi modern untuk memudahkan pasien menemukan informasi layanan, dokter, jadwal praktik, dan membuat janji temu.
+Website company profile untuk **Klinik & Rumah Bersalin Nur Fajar**, klinik bersalin yang berdiri sejak 2006 dan melayani ribuan keluarga di Kabupaten Bekasi. Website ini dibangun dengan teknologi modern untuk memudahkan pasien menemukan informasi layanan, dokter, jadwal praktik, dan membuat janji temu.
 
 ### ✨ Fitur Utama
 
