@@ -1,0 +1,49 @@
+/* ================================================================
+   Design Tokens — Klinik & Rumah Bersalin Nur Fajar
+   Ported from: project/index.html :root block
+   ================================================================ */
+
+:root {
+  /* --- Backgrounds --- */
+  --bg: #fdfbf9;
+  --cream: #f6ece2;
+  --cream-2: #faf3ec;
+  --paper: #fffdfb;
+
+  /* --- Rose (primary brand accent) --- */
+  --rose: #d79a90;
+  --rose-soft: #ecc3bb;
+  --rose-deep: #b56b5f;
+  --rose-tint: #f7e7e2;
+
+  /* --- Sage (secondary accent) --- */
+  --sage: #8a9a7b;
+  --sage-deep: #6c7d5d;
+  --sage-tint: #e9eee2;
+
+  /* --- Ink (text) --- */
+  --ink: #3a322d;
+  --ink-soft: #6c625b;
+  --muted: #9c9189;
+
+  /* --- Lines / Dividers --- */
+  --line: rgba(58, 50, 45, 0.10);
+  --line-soft: rgba(58, 50, 45, 0.06);
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 2px 10px rgba(58, 42, 32, 0.05);
+  --shadow: 0 18px 50px -20px rgba(110, 70, 55, 0.28);
+  --shadow-lg: 0 30px 80px -30px rgba(110, 70, 55, 0.40);
+
+  /* --- Border radius --- */
+  --r: 18px;
+  --r-lg: 26px;
+  --r-sm: 12px;
+
+  /* --- Typography (next/font CSS variables injected by layout.tsx) --- */
+  --serif: var(--font-spectral, "Spectral", Georgia, serif);
+  --sans: var(--font-figtree, "Figtree", system-ui, sans-serif);
+
+  /* --- Layout --- */
+  --container: 1180px;
+}
