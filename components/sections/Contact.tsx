@@ -1,5 +1,5 @@
 import { Icon, Btn, SectionHead } from "@/components/ui";
-import { waLink } from "@/lib/content";
+import { waLink, MAPS_URL } from "@/lib/content";
 import type { SiteContent } from "@/lib/content";
 
 interface ContactProps {
@@ -69,13 +69,19 @@ export function Contact({ t, onBook }: ContactProps) {
               </li>
             </ul>
 
-            {/* Maps placeholder */}
-            <div className="map-wrap" aria-label={c.mapLabel}>
+            {/* Maps — link ke Google Maps real */}
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="map-wrap"
+              aria-label={c.mapLabel}
+            >
               <div className="map-placeholder">
                 <Icon name="pin" size={32} />
                 <span>{c.mapLabel}</span>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* ── Right: form ── */}

@@ -24,29 +24,36 @@ const figtree = Figtree({
    Default metadata (SEO Sprint 5 akan memperkuat ini)
    ---------------------------------------------------------------- */
 export const metadata: Metadata = {
-  title: "Klinik & Rumah Bersalin Nur Fajar — Sleman, Yogyakarta",
+  title: "Klinik & Rumah Bersalin Nur Fajar — Cikarang Pusat, Bekasi",
   description:
-    "Klinik & Rumah Bersalin Nur Fajar melayani persalinan, pemeriksaan kehamilan, imunisasi, dan kesehatan keluarga di Sleman, Yogyakarta. IGD 24 Jam. Melayani BPJS.",
+    "Klinik & Rumah Bersalin Nur Fajar melayani persalinan, pemeriksaan kehamilan, imunisasi, KB, dokter umum, dan dokter gigi di Cikarang Pusat, Bekasi. Telp (021) 89834783. Melayani BPJS.",
   keywords: [
     "klinik bersalin",
     "rumah bersalin",
     "bidan",
-    "dokter kandungan",
+    "bidan cikarang",
+    "klinik cikarang",
+    "dokter umum cikarang",
+    "dokter gigi cikarang",
     "persalinan normal",
     "USG kehamilan",
     "imunisasi anak",
+    "KB",
     "BPJS",
-    "Sleman",
-    "Yogyakarta",
+    "Cikarang Pusat",
+    "Bekasi",
+    "Jayamukti",
+    "Nur Fajar",
   ],
   openGraph: {
-    title: "Klinik & Rumah Bersalin Nur Fajar",
+    title: "Klinik & Rumah Bersalin Nur Fajar — Cikarang Pusat, Bekasi",
     description:
-      "Mendampingi setiap perjalanan keluarga Anda — dari kehamilan, persalinan, hingga tumbuh kembang si kecil.",
+      "Mendampingi setiap perjalanan keluarga Anda — persalinan, KB, imunisasi, dokter umum & gigi — di Cikarang Pusat, Bekasi.",
     locale: "id_ID",
     type: "website",
   },
 };
+
 
 export default function RootLayout({
   children,

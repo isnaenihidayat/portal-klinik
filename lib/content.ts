@@ -158,7 +158,8 @@ export interface SiteContent {
   };
 }
 
-export const WA_NUMBER = "6281234567890"; // ← ganti nomor WhatsApp klinik
+export const WA_NUMBER = "6281234567890"; // ← ganti nomor WhatsApp klinik (nomor HP, bukan telepon kabel)
+export const MAPS_URL   = "https://maps.app.goo.gl/yv9XkT8tzTvEKBgZA";
 
 export const waLink = (text?: string): string =>
   `https://wa.me/${WA_NUMBER}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
@@ -182,9 +183,9 @@ export const CONTENT: Record<Locale, SiteContent> = {
       langLabel: "EN",
     },
     topbar: {
-      hours: "Buka setiap hari 07.00–21.00 · IGD 24 Jam",
+      hours: "Buka Senin–Sabtu · Cikarang Pusat, Bekasi",
       call: "Telepon",
-      phone: "(0274) 555-1234",
+      phone: "(021) 89834783",
     },
     hero: {
       eyebrow: "Merawat Bunda & Buah Hati Sejak 2009",
@@ -233,13 +234,14 @@ export const CONTENT: Record<Locale, SiteContent> = {
     doctors: {
       eyebrow: "Tim Medis",
       title: "Ditemani tangan yang berpengalaman",
-      desc: "Tim dokter dan bidan kami siap mendampingi Anda dengan sepenuh hati.",
+      desc: "Tim tenaga medis kami siap mendampingi Anda dengan sepenuh hati.",
       schedule: "Jadwal",
       items: [
-        { name: "dr. Siti Nurhaliza, Sp.OG",    role: "Dokter Spesialis Kandungan", days: "Sen–Jum · 09.00–14.00",          imgLabel: "foto dokter" },
-        { name: "dr. Ahmad Fauzi, Sp.A",         role: "Dokter Spesialis Anak",      days: "Sel, Kam, Sab · 15.00–19.00",   imgLabel: "foto dokter" },
-        { name: "Bidan Ratna Dewi, S.Tr.Keb",   role: "Bidan Senior",               days: "Setiap hari · 24 jam (shift)",   imgLabel: "foto bidan"  },
-        { name: "dr. Maya Andini",               role: "Dokter Umum",                days: "Sen–Sab · 08.00–20.00",          imgLabel: "foto dokter" },
+        { name: "Nur Fajriani",             role: "Bidan",       days: "Hubungi klinik untuk jadwal", imgLabel: "foto bidan"    },
+        { name: "Novia Putri Amd.keb., CHE", role: "Bidan",       days: "Hubungi klinik untuk jadwal", imgLabel: "foto bidan"    },
+        { name: "Drg. Retno Palupi",         role: "Dokter Gigi", days: "Hubungi klinik untuk jadwal", imgLabel: "foto dokter"   },
+        { name: "Dr. Ernasari",              role: "Dokter Umum", days: "Hubungi klinik untuk jadwal", imgLabel: "foto dokter"   },
+        { name: "Shinta, S.Farm, Apt.",      role: "Apoteker",    days: "Hubungi klinik untuk jadwal", imgLabel: "foto apoteker" },
       ],
     },
     schedule: {
@@ -293,18 +295,18 @@ export const CONTENT: Record<Locale, SiteContent> = {
     contact: {
       eyebrow: "Kontak & Lokasi",
       title: "Kami menanti kunjungan Anda",
-      address: "Jl. Melati Indah No. 24, Sleman, Yogyakarta 55281",
-      phoneLabel: "Telepon / WhatsApp",
-      phone: "(0274) 555-1234",
+      address: "Jl. Tapir III No.18 Rt.05/Rw.10, Jayamukti, Kec. Cikarang Pusat, Kab. Bekasi, Jawa Barat 17530",
+      phoneLabel: "Telepon",
+      phone: "(021) 89834783",
       emailLabel: "Email",
-      email: "halo@nurfajar.id",
+      email: "nurfajar.klinik@gmail.com",
       hoursLabel: "Jam Buka",
-      hoursVal: "Setiap hari 07.00–21.00 · IGD 24 Jam",
-      mapLabel: "peta lokasi (Google Maps)",
+      hoursVal: "Senin–Sabtu · Hubungi klinik untuk jam lengkap",
+      mapLabel: "Lihat di Google Maps",
       formTitle: "Buat Janji Temu",
       form: {
         name: "Nama lengkap",
-        phone: "Nomor WhatsApp",
+        phone: "Nomor telepon / WhatsApp",
         service: "Layanan",
         date: "Tanggal kunjungan",
         message: "Catatan (opsional)",
@@ -345,9 +347,9 @@ export const CONTENT: Record<Locale, SiteContent> = {
       langLabel: "ID",
     },
     topbar: {
-      hours: "Open daily 7am–9pm · ER 24 Hours",
+      hours: "Mon–Sat · Cikarang Pusat, Bekasi",
       call: "Call",
-      phone: "(0274) 555-1234",
+      phone: "(021) 89834783",
     },
     hero: {
       eyebrow: "Caring for Mothers & Little Ones Since 2009",
@@ -396,13 +398,14 @@ export const CONTENT: Record<Locale, SiteContent> = {
     doctors: {
       eyebrow: "Medical Team",
       title: "In experienced, caring hands",
-      desc: "Our doctors and midwives are ready to support you wholeheartedly.",
+      desc: "Our medical team is ready to support you wholeheartedly.",
       schedule: "Schedule",
       items: [
-        { name: "dr. Siti Nurhaliza, Sp.OG",  role: "Obstetrician & Gynecologist", days: "Mon–Fri · 9am–2pm",       imgLabel: "doctor photo"  },
-        { name: "dr. Ahmad Fauzi, Sp.A",       role: "Pediatrician",                days: "Tue, Thu, Sat · 3pm–7pm", imgLabel: "doctor photo"  },
-        { name: "Bidan Ratna Dewi, S.Tr.Keb", role: "Senior Midwife",              days: "Daily · 24h (shifts)",    imgLabel: "midwife photo" },
-        { name: "dr. Maya Andini",             role: "General Practitioner",        days: "Mon–Sat · 8am–8pm",       imgLabel: "doctor photo"  },
+        { name: "Nur Fajriani",             role: "Midwife",     days: "Contact clinic for schedule", imgLabel: "midwife photo"    },
+        { name: "Novia Putri Amd.keb., CHE", role: "Midwife",     days: "Contact clinic for schedule", imgLabel: "midwife photo"    },
+        { name: "Drg. Retno Palupi",         role: "Dentist",     days: "Contact clinic for schedule", imgLabel: "doctor photo"     },
+        { name: "Dr. Ernasari",              role: "General Practitioner", days: "Contact clinic for schedule", imgLabel: "doctor photo" },
+        { name: "Shinta, S.Farm, Apt.",      role: "Pharmacist",  days: "Contact clinic for schedule", imgLabel: "pharmacist photo" },
       ],
     },
     schedule: {
@@ -456,18 +459,18 @@ export const CONTENT: Record<Locale, SiteContent> = {
     contact: {
       eyebrow: "Contact & Location",
       title: "We look forward to your visit",
-      address: "Jl. Melati Indah No. 24, Sleman, Yogyakarta 55281",
-      phoneLabel: "Phone / WhatsApp",
-      phone: "(0274) 555-1234",
+      address: "Jl. Tapir III No.18 Rt.05/Rw.10, Jayamukti, Cikarang Pusat, Bekasi, West Java 17530",
+      phoneLabel: "Phone",
+      phone: "(021) 89834783",
       emailLabel: "Email",
-      email: "hello@nurfajar.id",
+      email: "nurfajar.klinik@gmail.com",
       hoursLabel: "Opening Hours",
-      hoursVal: "Daily 7am–9pm · ER 24 Hours",
-      mapLabel: "location map (Google Maps)",
+      hoursVal: "Mon–Sat · Contact clinic for full hours",
+      mapLabel: "View on Google Maps",
       formTitle: "Book an Appointment",
       form: {
         name: "Full name",
-        phone: "WhatsApp number",
+        phone: "Phone / WhatsApp number",
         service: "Service",
         date: "Visit date",
         message: "Note (optional)",

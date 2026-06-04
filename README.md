@@ -177,7 +177,7 @@ Preferensi bahasa disimpan di `localStorage` dan persisten antar kunjungan.
 | **S1** | Fondasi: Next.js setup, design system, komponen UI | ✅ Selesai |
 | **S2** | TopBar, Nav, Hero, Stats, About, FloatWA, Modal | ✅ Selesai |
 | **S3** | Services, Doctors, Schedule, Gallery + Carousel | ✅ Selesai |
-| **S4** | Articles, Testimonials, Contact, Footer | 🔄 Akan datang |
+| **S4** | Articles, Testimonials, Contact, Footer | ✅ Selesai |
 | **S5** | Foto real, SEO lanjutan, Lighthouse, Deploy | 🔄 Akan datang |
 
 ---
@@ -190,12 +190,19 @@ Ganti nomor WhatsApp klinik di [`lib/content.ts`](lib/content.ts):
 
 ```ts
 // lib/content.ts
-export const WA_NUMBER = "6281234567890"; // ← ganti nomor ini
+export const WA_NUMBER = "6281234567890"; // ← ganti nomor HP (format: 62xxx tanpa +)
+export const MAPS_URL  = "https://maps.app.goo.gl/yv9XkT8tzTvEKBgZA";
 ```
 
-### Informasi Kontak
+### Informasi Kontak Klinik
 
-Semua konten (alamat, telepon, email, jam buka) tersedia di [`lib/content.ts`](lib/content.ts) dalam objek `contact` untuk bahasa Indonesia (`id`) dan English (`en`).
+| Data | Nilai |
+|------|-------|
+| **Alamat** | Jl. Tapir III No.18 Rt.05/Rw.10, Jayamukti, Kec. Cikarang Pusat, Kab. Bekasi, Jawa Barat 17530 |
+| **Telepon** | (021) 89834783 |
+| **Google Maps** | [maps.app.goo.gl/yv9XkT8tzTvEKBgZA](https://maps.app.goo.gl/yv9XkT8tzTvEKBgZA) |
+
+Semua konten bilingual (alamat, telepon, jam buka) tersedia di [`lib/content.ts`](lib/content.ts) dalam objek `contact`.
 
 ---
 
