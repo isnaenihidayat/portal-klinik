@@ -1,19 +1,10 @@
-<div align="center">
 
-# 🏥 Klinik & Rumah Bersalin Nur Fajar
-
-**Website resmi Klinik & Rumah Bersalin Nur Fajar — Sleman, Yogyakarta**
-
-*Mendampingi setiap perjalanan keluarga Anda dengan penuh kasih.*
+# 🏥 Website Klinik & Rumah Bersalin Nur Fajar
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 [![Deploy](https://img.shields.io/badge/deploy-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
-
-</div>
-
----
 
 ## 📋 Tentang Proyek
 
@@ -228,12 +219,10 @@ Seluruh konten dan aset visual adalah milik klinik.
 
 ---
 
-<div align="center">
+## 👤 Dibuat Oleh
 
-Dibuat dengan ❤️ untuk keluarga Indonesia
-
-**Klinik & Rumah Bersalin Nur Fajar**  
-Jl. Melati Indah No. 24, Sleman, Yogyakarta 55281  
-📞 (0274) 555-1234 · ✉️ halo@nurfajar.id
+✍🏼 **Isnaeni Hidayat**  
+🏠 Cikarang, Kab. Bekasi, Jawa Barat  
+📞 (62) 878-0452-8887 · ✉️ isnaeni.hidayat@outlook.com
 
 </div>
