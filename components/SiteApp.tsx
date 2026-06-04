@@ -10,6 +10,11 @@ import {
   About,
   FloatWA,
   BookingModal,
+  // Sprint 3
+  Services,
+  Doctors,
+  Schedule,
+  Gallery,
 } from "@/components/sections";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -56,7 +61,12 @@ export function SiteApp() {
         <Hero t={t} onBook={openBook} />
         <Stats t={t} />
         <About t={t} />
-        {/* Sprint 3 sections will be added here */}
+        {/* Sprint 3 */}
+        <Services t={t} onBook={openBook} />
+        <Doctors t={t} />
+        <Schedule t={t} onBook={openBook} />
+        <Gallery t={t} />
+        {/* Sprint 4 sections will be added here */}
       </main>
 
       <FloatWA t={t} />

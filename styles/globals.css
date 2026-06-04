@@ -757,6 +757,30 @@ strong {
   gap: 12px;
 }
 
+/* Price tag inside service card */
+.service-price {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.service-price-note {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.service-price strong {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+}
+
+
 /* ---------- Carousel / horizontal scroller ---------- */
 .carousel {
   position: relative;

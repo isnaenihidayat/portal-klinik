@@ -3,3 +3,4 @@ export { Icon }         from "./Icon";
 export { Btn }          from "./Btn";
 export { SectionHead }  from "./SectionHead";
 export { Placeholder }  from "./Placeholder";
+export { Carousel }     from "./Carousel";
