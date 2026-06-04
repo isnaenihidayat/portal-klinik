@@ -530,17 +530,18 @@ strong {
 }
 
 .hero-img-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
   border-radius: var(--r-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  line-height: 0;
 }
 
-.hero-img {
-  object-fit: cover;
+.hero-photo {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: var(--r-lg);
+  max-width: 100%;
 }
 
 .hero-card {
@@ -638,16 +639,17 @@ strong {
 }
 
 .about-img-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 4;
   border-radius: var(--r-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  line-height: 0;
 }
 
-.about-img {
-  object-fit: cover;
+.about-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
 }
 
 .about-badge {
@@ -1022,19 +1024,22 @@ strong {
 }
 
 .gallery-item {
-  position: relative;
   border-radius: var(--r);
   overflow: hidden;
-  min-height: 180px;
   background: var(--ink-light);
+  line-height: 0;
+  position: relative;
 }
 
-.gallery-item img {
-  object-fit: cover;
+.gallery-photo {
+  width: 100%;
+  height: auto;
+  display: block;
   transition: transform 0.5s ease;
+  max-width: 100%;
 }
 
-.gallery-item:hover img {
+.gallery-item:hover .gallery-photo {
   transform: scale(1.05);
 }
 

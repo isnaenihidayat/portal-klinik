@@ -14,13 +14,14 @@ export function About({ t }: AboutProps) {
       <div className="container about-grid">
         {/* Image side */}
         <div className="about-media" data-reveal>
-          <div className="about-img-wrap" style={{ position: "relative" }}>
+          <div className="about-img-wrap">
             <Image
               src="/images/about-clinic.jpg"
               alt="Suasana klinik Nur Fajar — bidan berjalan di koridor"
-              fill
-              sizes="(max-width: 1000px) 100vw, 40vw"
-              style={{ objectFit: "cover" }}
+              width={600}
+              height={800}
+              className="about-photo"
+              style={{ height: "auto" }}
             />
           </div>
           <div className="about-badge">

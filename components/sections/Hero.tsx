@@ -62,14 +62,15 @@ export function Hero({ t, onBook }: HeroProps) {
 
         {/* Media */}
         <div className="hero-media" data-reveal>
-          <div className="hero-img-wrap" style={{ position: "relative" }}>
+          <div className="hero-img-wrap">
             <Image
               src="/images/hero-clinic.jpg"
               alt="Resepsi Klinik & Rumah Bersalin Nur Fajar"
-              fill
+              width={800}
+              height={600}
               priority
-              sizes="(max-width: 1000px) 100vw, 50vw"
-              style={{ objectFit: "cover" }}
+              className="hero-photo"
+              style={{ height: "auto" }}
             />
           </div>
 

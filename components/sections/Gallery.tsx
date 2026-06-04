@@ -42,15 +42,15 @@ export function Gallery({ t }: GalleryProps) {
             <div
               key={i}
               className={`gallery-item gallery-item-${i}`}
-              style={{ position: "relative" }}
               data-reveal
             >
               <Image
                 src={GALLERY_IMAGES[i].src}
                 alt={GALLERY_IMAGES[i].alt}
-                fill
-                sizes="(max-width: 760px) 100vw, (max-width: 1000px) 50vw, 25vw"
-                style={{ objectFit: "cover" }}
+                width={800}
+                height={600}
+                className="gallery-photo"
+                style={{ height: "auto" }}
               />
               <span className="gallery-label">{it.label}</span>
             </div>
