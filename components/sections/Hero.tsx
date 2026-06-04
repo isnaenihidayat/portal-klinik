@@ -61,7 +61,7 @@ export function Hero({ t, onBook }: HeroProps) {
         </div>
 
         {/* Media */}
-        <div className="hero-media" data-reveal>
+        <div className="hero-media">
           <div className="hero-img-wrap">
             <Image
               src="/images/hero-clinic.jpg"

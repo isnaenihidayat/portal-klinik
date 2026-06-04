@@ -3,14 +3,21 @@
 import { useEffect } from "react";
 
 /**
- * Attaches IntersectionObserver to all `.section` and `.stats` elements,
- * adding the `in` class when they enter the viewport.
- * Matches the scroll-reveal script from the prototype's index.html.
+ * Attaches IntersectionObserver to:
+ *   1. All `.section` and `.stats` elements (legacy scroll sections)
+ *   2. All elements that already have the `data-reveal` attribute set
+ *      in JSX (hero-media, about-media, gallery-item, etc.)
+ * Adds the `in` class when they enter the viewport.
  */
 export function useScrollReveal() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      const els = document.querySelectorAll<HTMLElement>(".section, .stats");
+      // Phase 1: mark .section and .stats with data-reveal (existing behaviour)
+      const sections = document.querySelectorAll<HTMLElement>(".section, .stats");
+      sections.forEach((el) => el.setAttribute("data-reveal", ""));
+
+      // Phase 2: observe ALL [data-reveal] elements (includes JSX-hardcoded ones)
+      const all = document.querySelectorAll<HTMLElement>("[data-reveal]");
       const io = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
@@ -20,14 +27,12 @@ export function useScrollReveal() {
             }
           });
         },
-        { threshold: 0.12 }
+        { threshold: 0.08 }
       );
-      els.forEach((el) => {
-        el.setAttribute("data-reveal", "");
-        io.observe(el);
-      });
+      all.forEach((el) => io.observe(el));
+
       return () => io.disconnect();
-    }, 300);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
