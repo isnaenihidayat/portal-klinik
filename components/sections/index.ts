@@ -11,3 +11,8 @@ export { Services }     from "./Services";
 export { Doctors }      from "./Doctors";
 export { Schedule }     from "./Schedule";
 export { Gallery }      from "./Gallery";
+// Sprint 4
+export { Articles }     from "./Articles";
+export { Testimonials } from "./Testimonials";
+export { Contact }      from "./Contact";
+export { Footer }       from "./Footer";

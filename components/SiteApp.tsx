@@ -15,6 +15,11 @@ import {
   Doctors,
   Schedule,
   Gallery,
+  // Sprint 4
+  Articles,
+  Testimonials,
+  Contact,
+  Footer,
 } from "@/components/sections";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -66,8 +71,13 @@ export function SiteApp() {
         <Doctors t={t} />
         <Schedule t={t} onBook={openBook} />
         <Gallery t={t} />
-        {/* Sprint 4 sections will be added here */}
+        {/* Sprint 4 */}
+        <Articles t={t} />
+        <Testimonials t={t} />
+        <Contact t={t} onBook={openBook} />
       </main>
+
+      <Footer t={t} />
 
       <FloatWA t={t} />
       <BookingModal t={t} open={booking} onClose={closeBook} />
