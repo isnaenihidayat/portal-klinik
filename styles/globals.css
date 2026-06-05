@@ -886,7 +886,23 @@ strong {
 }
 
 .doctor-img {
-  border-radius: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--cream-2);
+  line-height: 0;
+}
+
+.doctor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.doctor-card:hover .doctor-photo {
+  transform: scale(1.04);
 }
 
 .doctor-body {
@@ -1111,7 +1127,22 @@ strong {
 }
 
 .article-img {
-  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--cream-2);
+  line-height: 0;
+}
+
+.article-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover .article-photo {
+  transform: scale(1.04);
 }
 
 .article-body {
