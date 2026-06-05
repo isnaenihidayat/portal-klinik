@@ -39,15 +39,6 @@ export function Hero({ t, onBook }: HeroProps) {
             <Btn variant="primary" icon="calendar" onClick={onBook}>
               {h.ctaPrimary}
             </Btn>
-            <Btn
-              variant="ghost"
-              icon="whatsapp"
-              href={waLink(h.ctaSecondary)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {h.ctaSecondary}
-            </Btn>
           </div>
 
           <ul className="hero-chips">

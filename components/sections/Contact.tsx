@@ -13,7 +13,7 @@ interface ContactProps {
  * Lat: -6.3094, Lng: 107.1453
  */
 const MAPS_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d107.14305107499196!3d-6.309400193684396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c6db6e5cf7b%3A0x9a1234567890abcd!2sKlinik%20%26%20Rumah%20Bersalin%20Nur%20Fajar!5e0!3m2!1sid!2sid!4v1717555200000!5m2!1sid!2sid";
+  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.522943547401!2d107.1632286!3d-6.312145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699b16e284e415%3A0x616bab94e64b8c75!2sKlinik%20%26%20Rumah%20Bersalin%20Nur%20Fajar!5e0!3m2!1sen!2sid!4v1780629627372!5m2!1sen!2sid";
 
 export function Contact({ t, onBook }: ContactProps) {
   const c = t.contact;

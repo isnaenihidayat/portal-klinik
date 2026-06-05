@@ -202,7 +202,7 @@ export const CONTENT: Record<Locale, SiteContent> = {
     stats: [
       { value: "15+", label: "Tahun melayani" },
       { value: "8.000+", label: "Persalinan berhasil" },
-      { value: "12", label: "Dokter & bidan" },
+      { value: "5", label: "Dokter & bidan" },
       { value: "4,9/5", label: "Penilaian pasien" },
     ],
     about: {
@@ -252,7 +252,7 @@ export const CONTENT: Record<Locale, SiteContent> = {
       hours: [
         { day: "Senin – Jumat", time: "07.00 – 21.00" },
         { day: "Sabtu", time: "07.00 – 20.00" },
-        { day: "Minggu & Libur", time: "08.00 – 16.00" },
+        { day: "Ahad & Libur", time: "08.00 – 16.00" },
         { day: "IGD & Persalinan", time: "24 Jam" },
       ],
       ctaTitle: "Siap berkunjung?",
