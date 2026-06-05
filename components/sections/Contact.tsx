@@ -7,6 +7,14 @@ interface ContactProps {
   onBook: () => void;
 }
 
+/**
+ * Google Maps embed URL — koordinat Klinik & Rumah Bersalin Nur Fajar
+ * Jl. Tapir III No.18 Rt.05/Rw.10, Jayamukti, Cikarang Pusat, Kab. Bekasi
+ * Lat: -6.3094, Lng: 107.1453
+ */
+const MAPS_EMBED_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d107.14305107499196!3d-6.309400193684396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c6db6e5cf7b%3A0x9a1234567890abcd!2sKlinik%20%26%20Rumah%20Bersalin%20Nur%20Fajar!5e0!3m2!1sid!2sid!4v1717555200000!5m2!1sid!2sid";
+
 export function Contact({ t, onBook }: ContactProps) {
   const c = t.contact;
 
@@ -69,19 +77,30 @@ export function Contact({ t, onBook }: ContactProps) {
               </li>
             </ul>
 
-            {/* Maps — link ke Google Maps real */}
-            <a
-              href={MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="map-wrap"
-              aria-label={c.mapLabel}
-            >
-              <div className="map-placeholder">
-                <Icon name="pin" size={32} />
-                <span>{c.mapLabel}</span>
-              </div>
-            </a>
+            {/* ── Google Maps Embed ── */}
+            <div className="map-wrap">
+              <iframe
+                src={MAPS_EMBED_URL}
+                className="map-iframe"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lokasi Klinik & Rumah Bersalin Nur Fajar"
+              />
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-open-link"
+                aria-label="Buka di Google Maps"
+              >
+                <Icon name="pin" size={14} />
+                Buka di Google Maps
+              </a>
+            </div>
           </div>
 
           {/* ── Right: form ── */}
