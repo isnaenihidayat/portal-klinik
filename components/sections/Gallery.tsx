@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionHead } from "@/components/ui";
 import type { SiteContent } from "@/lib/content";
 
@@ -6,6 +5,11 @@ interface GalleryProps {
   t: SiteContent;
 }
 
+/**
+ * Source list of gallery images — update src when real photos are ready.
+ * Using native <img> (not next/image) so CSS object-fit:cover + absolute
+ * positioning fills each mosaic cell correctly.
+ */
 const GALLERY_IMAGES = [
   { src: "/images/gallery-01-birthing.jpg",    alt: "Ruang persalinan Klinik Nur Fajar"  },
   { src: "/images/gallery-02-inpatient.jpg",   alt: "Kamar rawat inap Klinik Nur Fajar"  },
@@ -16,14 +20,14 @@ const GALLERY_IMAGES = [
 ];
 
 /**
- * Gallery mosaic grid — 4 columns, 6 items.
+ * Gallery mosaic grid — 4 columns, 2 explicit rows (240px each).
  *
- * Mosaic layout (from CSS):
- *   item-0 → span 2 cols × 2 rows  (large feature image)
- *   item-3 → span 2 cols × 1 row   (wide landscape)
+ * Mosaic layout:
+ *   item-0 → span 2 cols × 2 rows  (large feature — birthing room)
+ *   item-3 → span 2 cols × 1 row   (wide landscape — waiting area)
  *   others → 1 col × 1 row
  *
- * On mobile (≤760px) items 0 and 3 span 2 of 2 cols (full width).
+ * Responsive (≤760px): 2-column grid, item-0 & item-3 span full width.
  */
 export function Gallery({ t }: GalleryProps) {
   const g = t.gallery;
@@ -39,18 +43,20 @@ export function Gallery({ t }: GalleryProps) {
         />
         <div className="gallery-grid">
           {g.items.map((it, i) => (
+            // eslint-disable-next-line jsx-a11y/no-static-element-interactions
             <div
               key={i}
               className={`gallery-item gallery-item-${i}`}
               data-reveal
             >
-              <Image
+              {/* native img so CSS absolute + object-fit:cover fills mosaic cell */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={GALLERY_IMAGES[i].src}
                 alt={GALLERY_IMAGES[i].alt}
-                width={800}
-                height={600}
                 className="gallery-photo"
-                style={{ height: "auto" }}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
               />
               <span className="gallery-label">{it.label}</span>
             </div>
