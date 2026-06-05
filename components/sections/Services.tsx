@@ -36,11 +36,6 @@ export function Services({ t, onBook }: ServicesProps) {
               <h3 className="service-name">{it.name}</h3>
               <p className="service-desc">{it.desc}</p>
 
-              {/* Price */}
-              <p className="service-price">
-                <span className="service-price-note">{s.priceNote}</span>
-                <strong>{it.price}</strong>
-              </p>
 
               <span className="service-link">
                 {s.detailCta}
